@@ -1,0 +1,40 @@
+# TimedActions Configuration
+# Configure timed schedules that run commands at specified intervals
+
+schedules:
+  borderShrink:
+    mode: minecraft_days # minecraft_days or real_time
+    interval: 5 # 5 minecraft days
+    commands:
+      - "worldborder set 5000"
+      - "say The world border is now %worldborder_size%!"
+    broadcast: "&cThe world border shrinks every 5 days! Current size: %worldborder_size%"
+    console-log: true
+
+  giveDiamonds:
+    mode: real_time # real_time mode
+    interval: 1h # 1 hour (supports: s, m, h, d for seconds, minutes, hours, days)
+    commands:
+      - "give %player_name% diamond 1"
+      - "eco give %player_name% 100" # Vault integration
+    broadcast: "&b%player_name% received a diamond and $100!"
+    console-log: true
+
+  rankUp:
+    mode: real_time
+    interval: 7d # 7 days
+    commands:
+      - "lp user %player_name% parent add veteran"
+    broadcast: "&6%player_name% has ranked up to Veteran after 7 days!"
+    console-log: true
+
+# Global settings
+settings:
+  # Whether to enable PlaceholderAPI support
+  placeholder-api: true
+
+  # Prefix for all broadcast messages
+  broadcast-prefix: "&8[&6TimedActions&8]&r "
+
+  # Whether to log all schedule triggers to console
+  global-console-log: true

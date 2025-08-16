@@ -1,0 +1,24 @@
+name: TimedActions
+version: "${version}"
+main: org.tejaslamba2006.timedactions.TimedActionsPlugin
+description: A plugin for scheduling timed actions in Minecraft
+api-version: 1.13
+authors: [TejasLamba2006]
+depend:
+  - BlueSlimeCore
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - LuckPerms
+  - WorldBorder
+commands:
+  timedactions:
+    description: The main command for TimedActions plugin
+    usage: /timedactions <reload|trigger|list>
+    permission: timedactions.admin
+    aliases: [ta]
+
+permissions:
+  timedactions.admin:
+    description: Permission to use TimedActions admin commands
+    default: op

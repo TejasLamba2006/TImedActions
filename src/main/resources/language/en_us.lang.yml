@@ -1,0 +1,32 @@
+# TimedActions English Language File
+
+# Prefix which will be shown before all the messages.
+prefix: "<gold>TimedActions <gray>»<white>"
+help-title: "<gold>Help: <b>%command%"
+
+# Messages for commands:
+commands:
+  # /timedactions reload
+  reload: "<green>Configuration and schedules reloaded."
+
+  # /timedactions trigger
+  trigger:
+    success: "<green>Schedule triggered successfully."
+    not-found: "<red>Schedule not found."
+    error: "<red>Error triggering schedule."
+
+  # /timedactions list
+  list:
+    no-schedules: "<red>No schedules configured."
+
+  # /timedactions help
+  help: |-
+    <yellow>/timedactions reload <gray>- <white>Reload plugin configuration and restart all schedules.
+    <yellow>/timedactions list <gray>- <white>Display all configured schedules and their status.
+    <yellow>/timedactions trigger <schedule> <gray>- <white>Manually trigger a specific schedule.
+    <yellow>/timedactions help <gray>- <white>Show this help message.
+
+# Schedule execution messages
+schedule:
+  triggered: "<green>Schedule '%schedule_name%' has been triggered!"
+  executed: "<gray>Executed schedule: %schedule_name%"
